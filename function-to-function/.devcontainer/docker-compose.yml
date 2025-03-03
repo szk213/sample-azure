@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  sample-azure_function-to-function:
+    build: ./
+    tty: true
+    stdin_open: true
+    volumes:
+      - type: bind
+        source: "../"
+        target: "/work"
