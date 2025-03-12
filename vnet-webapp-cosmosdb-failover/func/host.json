@@ -1,0 +1,14 @@
+{
+  "version": "2.0",
+  "extensions": {
+    "http": {
+      "maxOutstandingRequests": 1,
+      "maxConcurrentRequests": 1
+    }
+  },
+  "functionTimeout": "01:00:00",
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[4.*, 5.0.0)"
+  }
+}
