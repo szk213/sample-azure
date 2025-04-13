@@ -1,0 +1,71 @@
+{
+  "network": {
+    "je": {
+      "route_tables": {
+      },
+      "network_security_groups": {
+        "network_security_group_1": {
+          "subnet": "sampleSubnet",
+          "rules": {
+            "rule_1": {
+              "name": "sampleRule",
+              "protocol": "Tcp",
+              "source_port_range": "*",
+              "destination_port_range": "80",
+              "source_address_prefix": "*",
+              "destination_address_prefix": "*",
+              "access": "Allow",
+              "priority": 100
+            }
+          }
+        }
+      }
+    },
+    "jw": {
+      "route_tables": {
+        "route_table_1": {
+          "subnet": "sampleSubnet",
+          "routes": {
+            "route_1": {
+              "address_prefix": "10.0.0.0/16",
+              "next_hop_type": "VirtualAppliance",
+              "next_hop_in_ip_address": "192.168.1.1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "gateways": {
+    "je": {
+      "app_gateways": {
+        "route_table_1": {
+          "vnet": "sampleVnet",
+          "subnet": "sampleSubnet",
+          "routes": {
+            "route_1": {
+              "address_prefix": "10.0.0.0/16",
+              "next_hop_type": "VirtualAppliance",
+              "next_hop_in_ip_address": "192.168.1.1"
+            }
+          }
+        }
+      }
+    },
+    "jw": {
+      "app_gateways": {
+        "route_table_1": {
+          "vnet": "sampleVnet",
+          "subnet": "sampleSubnet",
+          "routes": {
+            "route_1": {
+              "address_prefix": "10.0.0.0/16",
+              "next_hop_type": "VirtualAppliance",
+              "next_hop_in_ip_address": "192.168.1.1"
+            }
+          }
+        }
+      }
+    }
+  }
+}
